@@ -28,6 +28,7 @@ function copyFolder() {
 
 async function haveFolder() {
   const direct = await fs.readdir(__dirname);
+  console.log(direct);
   if (direct.includes('files-copy')) {
     fs.rm(copyDir, {recursive: true}, (err) => {
       if (err) {
